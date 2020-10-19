@@ -1,0 +1,26 @@
+version: '3'
+services:
+  mongodb:
+    image: mongo:4-xenial
+    container_name: mongodb
+    volumes:
+      - "${PWD}/wikimoecard/data:/data/db"
+    networks:
+      - wikinet
+    restart: always
+  wikimoecard:
+    image: wikimoecard:latest
+    container_name: wikimoecard
+#    environment:
+#      - /home/pi/wikimoe/wiki/default.js:/app/server/config/default.js:rw
+    ports:
+      - "3000:3000"
+#     - "667:443" 
+    depends_on:
+      - mongodb
+    networks:
+      - wikinet
+    restart: always
+networks:
+  wikinet:
+      driver: bridge

@@ -1,0 +1,28 @@
+FROM arm64v8/node:12.16.1-stretch as builder
+
+RUN groupadd -r jiyuuneko \
+&&  useradd -r -g jiyuuneko jiyuuneko
+
+#ENV WC_VERSION 2.9.8
+
+WORKDIR /app
+
+ADD . /app
+
+RUN set -x \
+ && cd /app/server \
+# && npm install -g cnpm --registry=https://registry.npm.taobao.org \
+# && cnpm install \
+ && npm install \
+ && npm cache clear --force \
+ && chown -R jiyuuneko:jiyuuneko /app
+
+USER jiyuuneko
+
+WORKDIR /app/server
+
+EXPOSE 3000
+
+EXPOSE 667
+
+CMD ["npm", "start"]
