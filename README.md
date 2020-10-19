@@ -16,7 +16,7 @@ Docker版本GitHub项目地址：[Github](https://github.com/Jiyuuneko/WikimoeCa
 
 一款由玩家自由DIY卡牌的卡牌收集游戏。
 
-🐳 WikimoeCard Docker image. 
+🐳 WikimoeCard Docker image for ARM64. 
 
 
 ## 使用方法
@@ -142,9 +142,9 @@ docker logs wikimoecard
 
 在 `yourdomain.com:xxx/cardadmin` 进入管理员中心。
 
-#### 在X86环境下安装
+#### 在X86与ARM32环境下安装
 
-默认安装配置适用于ARM环境，X86请更换mongoDB和Node镜像。
+默认安装配置适用于ARM64环境，X86与ARM32请更换mongoDB和Node镜像。
 
 ### 环境变量
 
