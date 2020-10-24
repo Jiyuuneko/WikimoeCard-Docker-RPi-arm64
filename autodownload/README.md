@@ -7,7 +7,7 @@ Due to the direct download from Github, the download speed may be slow if you ar
 修改 `dockerfile` 文件内的版本号码对应最新的版本:
 
 ```
-ENV RC_VERSION 2.9.8
+ENV WC_VERSION 2.9.8
 ```
 
 构建Docker执行下面的命令:
