@@ -27,13 +27,17 @@ Docker版本GitHub项目地址：[Github](https://github.com/Jiyuuneko/WikimoeCa
 
 #### 1. 从仓库pull
 
-```docker pull jiyuuneko/wikimoecard:latest```
+```
+docker pull jiyuuneko/wikimoecard:latest
+```
 
 #### 2. 下载Docker配置文件
 
 下载 `compose` 文件夹，并运行：
 
-```docker-compose up -d```
+```
+docker-compose up -d
+```
 
 ### 手动安装
 
@@ -93,7 +97,9 @@ let baseConfig = {
 
 进入`card`文件夹，运行命令：
 
-```docker build -t wikimoecard:latest .```
+```
+docker build -t wikimoecard:latest .
+```
 
 #### 5. 启动WikimoeCard服务器
 
